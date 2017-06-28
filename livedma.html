@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yves-Pol CABON</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="One page dedicated to candidating to live DMA" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+<!--/* Create a Parallax Effect */-->
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titre {
+	word-break: break-all;
+}
+<!--/* Effet de décalage du menu latéral*/-->
+#main {
+	margin-left: 47px;
+}
+
+<!--/*texte qui passe de w3-medium à w3-small quand l'écran est <1024*/-->
+@media screen and (max-width: 768px) {
+	.txt-med2sml {
+		font-size: 12.5px;
+	}
+}
+
+<!--/*stylise lorsque je prends la parole*/-->
+.txt-yp {
+	font-style: italic;
+	opacity: 0.8;
+}
+
+<!--/*changement quand l'item de nav est actif*/-->
+nav a.active {
+    background-color: black;
+    color: white;
+}
+
+<!--/* First image (Logo. Full height) */-->
+.bgimg-1 {
+    background-image: url('https://aesthetic-meme.neocities.org/mmmm%20sweet%20aesthetic.jpg');
+    min-height: 100%;
+}
+
+<!--/* Second image (Portfolio) */-->
+.bgimg-2 {
+    background-image: url("/w3images/parallax2.jpg");
+    min-height: 400px;
+}
+
+<!--/* Third image (Contact) */-->
+.bgimg-3 {
+    background-image: url("/w3images/parallax3.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+<!--/* Turn off parallax scrolling for tablets and phones */-->
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+<!--change navigation active class when scroll-->
+<script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type='text/javascript'>//<![CDATA[
+$(function(){
+$('a, button').on('click', function() {
+    var scrollAnchor = $(this).attr('data-scroll'),
+        scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top /*+ 28*/;
+    $('body,html').animate({
+        scrollTop: scrollPoint
+    }, 500);
+    return false;
+})
+$(window).scroll(function() {
+    var windscroll = $(window).scrollTop();
+    if (windscroll >= 100) {
+        $('.tout section').each(function(i) {
+            if ($(this).position().top <= windscroll - 20) {
+                $('nav a.active').removeClass('active');
+                $('nav a').eq(i).addClass('active');
+            }
+        });
+    } else {
+        $('nav a.active').removeClass('active');
+        $('nav a:first').addClass('active');
+    }
+}).scroll();
+});//]]> 
+</script>
+</head>
+<body>
+
+ <div class="w3-sidebar w3-bar-block w3-card-left" style="width:47px; display:block">
+	<nav>
+		<a href="#" data-scroll="home" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a>
+		<a href="#" data-scroll="choice" class="w3-bar-item w3-button"><i class="fa fa-exchange"></i></a>
+		<a href="#" data-scroll="about" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+		<a href="#" data-scroll="what" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>
+		<a href="#" data-scroll="case-study" class="w3-bar-item w3-button"><i class="fa fa-bolt"></i></a>
+		<a href="#" data-scroll="resume" class="w3-bar-item w3-button"><i class="fa fa-table"></i></a>
+		<a href="#" data-scroll="position" class="w3-bar-item w3-button"><i class="fa fa-check-square-o"></i></a>
+		<a href="#" data-scroll="contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+	</nav>
+</div> 
+
+<div zclass="w3-main" class="tout" id="main"> <!--pour tout décaler en rapport au menu-->
+
+	<section data-anchor="home" id="home" >
+	<!-- First Parallax Image with Logo Text -->
+		<div class="bgimg-1 w3-display-container w3-opacity-min main" style="height:300px;" >
+			<div class="w3-display-middle main">
+				<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity w3-mobile">HELLO AUDREY</span>
+			</div>
+			<div class="w3-content w3-padding w3-display-bottommiddle">
+				<button data-scroll="choice" class="w3-button w3-ripple w3-circle w3-grey">
+					<i class="fa fa-angle-down"></i>
+				</button>
+			</div>
+		</div>
+	</section>
+	
+	<section data-anchor="intro" id="intro">
+		<div class="w3-container">
+			<div class="w3-row-padding w3-center">
+				<p class="txt-yp txt-med2sml">My name is <a href="https://www.yvespolcabon.com" target="_blank"><strong>Yves-Pol</strong></a>.<br>Welcome to the website I've set up to candidate to the <a href="http://www.live-dma.eu/"target="_blank"><strong>LIVE DMA</strong></a>'s Communication officer position.<br>I figured it would be less redondant than another bullet-point resume !<br>I hope this will help you know me better and understand why I think that I am qualified and adequate for this opportunity !<br>Have a good read :)</p>
+			</div>
+		</div>
+	</section>
+	
+	<section data-anchor="choice" id="choice" >
+		<div class="w3-container">
+			<div class="w3-row-padding">
+				<div class="w3-col w3-half w3-center">
+					<p>I'm intrigued ! Do tell me more...</p>
+					<button data-scroll="about" class="w3-button w3-white w3-border w3-border-blue w3-round-large w3-padding-large w3-mobile w3-wide"><p class="titre">THE JOURNEY</p></button>
+				</div>
+				<div class="w3-col w3-half w3-center">
+					<p>I don't have the time !</p>
+					<button data-scroll="position" class="w3-button w3-white w3-border w3-border-blue w3-round-large w3-padding-large w3-mobile w3-wide"><p class="titre">THE ESSENTIAL</p></button>
+				</div>
+			</div>
+			<br>
+		</div>
+	</section>
+	
+	<!-- Container (About Section) -->
+	<section data-anchor="about" id="about">
+		<!-- Second Parallax Image with Portfolio Text -->
+		<div class="bgimg-1 w3-display-container w3-opacity-min" style="height:300px;">
+			<div class="w3-display-middle">
+				<span class="w3-xxlarge w3-text-white w3-wide titre">WHO AM I ?</span>
+			</div>
+		</div>
+		<div class="w3-content w3-container w3-padding-64" >
+			<h3 class="w3-center">ABOUT ME</h3>
+			<p class="w3-center"><em>Web · Design · Music </em></p>
+			<p><i>I'm 25 yo. My drivers in life are connecting things, design, and music. What interests me most in any job is the mission : I thrive when challenged to build something to help achieving a goal. I find my <a href="https://www.16personalities.com/enfp-personality" target="_blank">Myers-Briggs profile</a> to be quite accurate (which surprised me at first).<br>You can find out more about me and what I do through the various link on my <a href="http://yvespolcabon.com" target="_blank">website</a> (mostly in french)</i></p>
+			<div class="w3-row">
+				<div class="w3-col m6 w3-center w3-padding-large">
+					<p><b><i class="fa fa-user w3-margin-right"></i>Yves-Pol CABON</b></p><br>
+					<img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+				</div>
+				<!-- Hide this text on small devices -->
+				<div class="w3-col m6 w3-hide-small w3-padding-large">
+					<p><i>I'm very passionate about music. I am currently playing guitar and singing backing voices in the indie rock band <a href="http://ultraviolence.band" target="_blank">ULTRAVIOLENCE</a>. On the side I work on two electronic projects : <a href="https://soundcloud.com/frenchhype" target="_blank">laptopStrummer</a> (everything-goes electronica) and <a href="https://mandarine.band" target="_blank">M A N D A R I N E</a> (A mix of electro and synthwave with a spritz of techno for good measure) <br>I guess you COULD call me a little extra</i></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+		<!-- Container (About Section) -->
+	<section data-anchor="what" id="what">
+		<!-- Second Parallax Image with Portfolio Text -->
+		<div class="bgimg-1 w3-display-container w3-opacity-min" style="height:300px;">
+			<div class="w3-display-middle">
+				<span class="w3-xxlarge w3-text-white w3-wide titre">WHAT DO I DO ?</span>
+			</div>
+		</div>
+		<p class="w3-large w3-center w3-padding-16"><em>Im pretty good at:</em></p>
+		<div class="w3-content w3-container w3-padding-64" >
+			<div class="w3-half w3-padding-small">
+				<p class="w3-wide"><i class="fa fa-calendar-check-o center"></i>Project Management</p>
+				<div class="w3-light-grey">
+					<div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+				</div>
+				<p class="w3-wide"><i class="fa fa-users"></i>Community Management</p>
+				<div class="w3-light-grey">
+					<div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:65%">65%</div>
+				</div>
+			</div>
+			<div class="w3-half w3-padding-small">
+				<p class="w3-wide"><i class="fa fa-user-circle"></i>UX/UI design</p>
+				<div class="w3-light-grey">
+					<div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:50%">50%</div>
+				</div>
+				<p class="w3-wide"><i class="fa fa-laptop"></i>Webdesign</p>
+				<div class="w3-light-grey">
+					<div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+				</div>
+			</div>
+		</div>
+		<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+			<div class="w3-quarter w3-section">
+				<span class="w3-xlarge">9</span><br>
+				Professionnals experiences
+			</div>
+			<div class="w3-quarter w3-section">
+				<span class="w3-xlarge">∞</span><br>
+				Meetings
+		  </div>
+			<div class="w3-quarter w3-section">
+				<span class="w3-xlarge">7+</span><br>
+				Websites
+			</div>
+			<div class="w3-quarter w3-section">
+				<span class="w3-xlarge">5+</span><br>
+				(Social Networks) Communities
+			</div>
+		</div>
+	</section>
+	<section data-anchor="showcase" id="showcase">
+	<!-- Container (Portfolio Section) -->
+		<div class="w3-content w3-container w3-padding-64" >
+			<h3 class="w3-center">SOME SAMPLES OF MY WORK</h3>
+			<p class="w3-center"><em>Here are some of my latest communication-related projects<br> Click on the images to go to the source</em></p>
+			<br>
+			<!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+			<div class="w3-row-padding w3-center">
+				<div class="w3-col m4">
+					<div class="w3-display-container">
+						<a href="https://www.instagram.com/ultraviolencetheband/" target="_blank"><img src="https://media1.giphy.com/media/3o6ozmF4ZGOG3DWZyg/200_s.gif" alt="ULTRAVIOLENCE's Instagram" onclick="onClick(this)" style="width:100%" class="w3-hover-opacity w3-round"></a>
+						<div class="w3-padding w3-display-middle"><i class="fa fa-instagram fa-5x fa-inverse"></i></div>
+					</div> 
+				</div>
+				<div class="w3-col m4">
+					<div class="w3-display-container">
+						<a href="http://twitter.com/latableangevine" target="_blank"><img src="https://media1.giphy.com/media/3o6ozmF4ZGOG3DWZyg/200_s.gif" alt="La Table Angevine's Twitter" onclick="onClick(this)" style="width:100%" class="w3-hover-opacity w3-round"></a>
+						<div class="w3-padding w3-display-middle"><i class="fa fa-twitter fa-5x fa-inverse"></i></div>
+					</div> 
+				</div>
+				<div class="w3-col m4">
+					<div class="w3-display-container">
+						<a href="https://twitter.com/i/moments/836490474915520512" target="_blank"><img src="https://media1.giphy.com/media/3o6ozmF4ZGOG3DWZyg/200_s.gif" alt="An event twitter moment" onclick="onClick(this)" style="width:100%" class="w3-hover-opacity w3-round"></a>
+						<div class="w3-padding w3-display-middle"><i class="fa fa-twitter-square fa-5x fa-inverse"></i></div>
+					</div> 
+				</div>
+			</div>
+			<div class="w3-row-padding">
+			<div class="w3-col m4">
+				<div class="w3-display-container">
+						<a href="http://anjousaber.com" target="_blank"><img src="https://media1.giphy.com/media/3o6ozmF4ZGOG3DWZyg/200_s.gif" alt="Anjou Saber's website" onclick="onClick(this)" style="width:100%" class="w3-hover-opacity w3-round"></a>
+						<div class="w3-padding w3-display-middle"><i class="fa fa-at fa-5x fa-inverse"></i></div>
+					</div> 
+			</div>
+			<div class="w3-col m4">
+				<div class="w3-display-container">
+						<a href="http://ultraviolence.band" target="_blank"><img src="https://media1.giphy.com/media/3o6ozmF4ZGOG3DWZyg/200_s.gif" alt="ULTRAVIOLENCE's website" onclick="onClick(this)" style="width:100%" class="w3-hover-opacity w3-round"></a>
+						<div class="w3-padding w3-display-middle"><i class="fa fa-volume-up fa-5x fa-inverse"></i></div>
+					</div> 
+			</div>
+			<div class="w3-col m4">
+				<div class="w3-display-container">
+						<a href="http://mandarine.band" target="_blank"><img src="https://media1.giphy.com/media/3o6ozmF4ZGOG3DWZyg/200_s.gif" onclick="onClick(this)" alt="MANDARINE's website" style="width:100%" class="w3-hover-opacity w3-round"></a>
+						<div class="w3-padding w3-display-middle"><i class="fa fa-music fa-5x fa-inverse"></i></div>
+				</div> 
+				</div>
+			</div>
+		</div>
+	</section>
+	<section data-anchor="case-study" id="case-study">
+		<div class="w3-content w3-container w3-padding" >
+			<h3 class="w3-center">CASE STUDY :<br>WHAT WOULD I DO ABOUT YOUR WEBSITE ?</h3>
+			<p class="w3-center"><em>As a communication officier I would be in the perfect position to help optimize your online presence.<br>Let's start early with your website ?</em></p>
+			<br>
+		</div>
+		<div class="w3-container">
+			<div class="w3-col w3-mobile m4">
+				<div class="w3-display-container">
+					<img src="http://yvespolcabon.com/wp-content/uploads/2017/06/ldma_1.png" class="w3-image">
+					<div class="w3-display-middle w3-text-black w3-center w3-display-hover txt-med2sml" style="text-shadow:2px 1px 0 #fff"><b>THE TEXT ISN'T VERY VISIBLE NOW IS IT ?</b></div>
+				</div>
+				<p class="w3-center txt-med2sml">I would change the centered text outline so it's actually readable</p>
+			</div>
+			<div class="w3-col w3-mobile m4">
+				<div class="w3-display-container">
+					<img src="http://yvespolcabon.com/wp-content/uploads/2017/06/ldma_2.png" class="w3-image">
+					<div class="w3-display-middle w3-text-black w3-center w3-display-hover txt-med2sml" style="text-shadow:2px 1px 0 #fff"><b>WHAT'S UP WITH THIS BIG EMPTY SPACE IN THE MIDDLE  ?</b></div>
+				</div>
+				<p class="w3-center txt-med2sml">I would put out a message for users with an ad-blocker</p>
+			</div>
+			<div class="w3-col w3-mobile m4">
+				<div class="w3-display-container">
+					<img src="http://yvespolcabon.com/wp-content/uploads/2017/06/ldma_3.png" class="w3-image">
+					<div class="w3-display-middle w3-text-black w3-center w3-display-hover txt-med2sml" style="text-shadow:2px 1px 0 #fff"><b>IS THIS THE MOST IMPORTANT INFO FOR YOUR USERS ?</b></div>
+				</div>
+				<p class="w3-center txt-med2sml">I would rethink the UX of the main page</p>
+			</div>
+		</div>
+	<br>
+	</section>
+	
+	<section data-anchor="resume" id="resume">
+		<!-- Second Parallax Image with Portfolio Text -->
+		<div class="bgimg-1 w3-display-container w3-opacity-min" style="height:300px;">
+		  <div class="w3-display-middle">
+			<span class="w3-xxlarge w3-text-white w3-wide titre">RESUME</span>
+		  </div>
+		</div>
+		<div class="w3-container">
+			<div class="w3-row">
+				<div class="w3-col w3-half w3-padding-large">
+					<p class="w3-center w3-wide" ><strong>SKILLS</strong></p>
+					<div class="w3-col">
+						<div class="w3-row w3-border">
+							<div class="w3-center w3-half w3-mobile">
+								<button onclick="document.getElementById('id01').style.display='block'" class="w3-button">WEBDESIGN</button>
+								<div id="id01" class="w3-modal">
+									<div class="w3-modal-content w3-card-4 w3-animate-opacity">
+									  <header class="w3-container w3-rounded w3-pink"> 
+										<span onclick="document.getElementById('id01').style.display='none'" 
+										class="w3-button w3-display-topright">&times;</span>
+										<h3>WEBDESIGN</h3>
+									  </header>
+									  <div class="w3-container">
+										<i>I know my way around a website</i>
+									  </div>
+									</div>
+								</div>
+								<div class="w3-row-padding">
+									<div class="w3-col s3"><i class="fa fa-html5"></i></div>
+									<div class="w3-col s3"><i class="fa fa-css3"></i></div>
+									<div class="w3-col s3"><i class="fa fa-drupal"></i></div>
+									<div class="w3-col s3"><i class="fa fa-wordpress"></i></div>
+								</div>
+							</div>
+							<div class="w3-half w3-mobile w3-light-grey w3-small">
+								<ul>
+									<li>CMS</li>
+									<li>Front-end developpement</li>
+									<li>UX/UI design</li>
+								</ul>
+							</div>
+						</div>
+						<div class="w3-row w3-border">
+							<div class="w3-center w3-half w3-mobile">
+								<button onclick="document.getElementById('id02').style.display='block'" class="w3-button">INFODESIGN</button>
+								<div id="id02" class="w3-modal">
+									<div class="w3-modal-content w3-card-4 w3-animate-opacity">
+									  <header class="w3-container w3-rounded w3-pink"> 
+										<span onclick="document.getElementById('id02').style.display='none'" 
+										class="w3-button w3-display-topright">&times;</span>
+										<h3>INFODESIGN</h3>
+									  </header>
+									  <div class="w3-container">
+										<i>I can present information clearly</i>
+									  </div>
+									</div>
+								</div>
+								<div class="w3-row-padding">
+									<div class="w3-col s4"><i class="fa fa-database"></i></div>
+									<div class="w3-col s4"><i class="fa fa-table"></i></div>
+									<div class="w3-col s4"><i class="fa fa-code-fork"></i></div>
+								</div>
+							</div>
+							<div class="w3-half w3-mobile w3-light-grey w3-small">
+								<ul>
+									<li>Datamining</li>
+									<li>Analytics</li>
+									<li>Dataviz</li>
+								</ul>
+							</div>
+						</div>
+						<div class="w3-row w3-border">
+							<div class="w3-center w3-half w3-mobile">
+								<button onclick="document.getElementById('id03').style.display='block'" class="w3-button">DESIGN</button>
+								<div id="id03" class="w3-modal">
+									<div class="w3-modal-content w3-card-4 w3-animate-opacity">
+									  <header class="w3-container w3-rounded w3-pink"> 
+										<span onclick="document.getElementById('id03').style.display='none'" 
+										class="w3-button w3-display-topright">&times;</span>
+										<h3>DESIGN</h3>
+									  </header>
+									  <div class="w3-container">
+										<i>I put the final user first in everything i do<br>Also I can do pretty things</i>
+									  </div>
+									</div>
+								</div>
+								<div class="w3-row-padding">
+									<div class="w3-col s4"><i class="fa fa-mobile"></i></div>
+									<div class="w3-col s4"><i class="fa fa-desktop"></i></div>
+									<div class="w3-col s4"><i class="fa fa-pencil"></i></div>
+								</div>
+							</div>
+							<div class="w3-half w3-mobile w3-light-grey w3-small">
+								<ul>
+									<li>Gimp</li>
+									<li>ADOBE Photoshop</li>
+									<li>Inkscape</li>
+									<li>Canva</li>
+								</ul>
+							</div>
+						</div>
+						<div class="w3-row w3-border">
+							<div class="w3-center w3-half w3-mobile">
+								<button onclick="document.getElementById('id04').style.display='block'" class="w3-button">WEB</button>
+								<div id="id04" class="w3-modal">
+									<div class="w3-modal-content w3-card-4 w3-animate-opacity">
+									  <header class="w3-container w3-rounded w3-pink"> 
+										<span onclick="document.getElementById('id04').style.display='none'" 
+										class="w3-button w3-display-topright">&times;</span>
+										<h3>WEB</h3>
+									  </header>
+									  <div class="w3-container">
+										<i>I get around social networks</i>
+									  </div>
+									</div>
+								</div>
+								<div class="w3-row-padding">
+									<div class="w3-col s4"><i class="fa fa-facebook"></i></div>
+									<div class="w3-col s4"><i class="fa fa-twitter"></i></div>
+									<div class="w3-col s4"><i class="fa fa-area-chart"></i></div>
+								</div>
+							</div>
+							<div class="w3-half w3-mobile w3-light-grey w3-small">
+								<ul>
+									<li>Social networking</li>
+									<li>Community Management</li>
+									<li>Bookmarking, Search, Taxonomy</li>
+									<li>SEO</li>
+									<li>Google Analytics</li>
+								</ul>
+							</div>
+						</div>
+						<div class="w3-row w3-border">
+							<div class="w3-center w3-half w3-mobile">
+								<button onclick="document.getElementById('id05').style.display='block'" class="w3-button">LANGUAGES</button>
+								<div id="id05" class="w3-modal">
+									<div class="w3-modal-content w3-card-4 w3-animate-opacity">
+									  <header class="w3-container w3-rounded w3-pink"> 
+										<span onclick="document.getElementById('id05').style.display='none'" 
+										class="w3-button w3-display-topright">&times;</span>
+										<h3>LANGUAGES</h3>
+									  </header>
+									  <div class="w3-container">
+										<i>I can do front-end developpement alright (i know how to make pretty websites)<br>I'm not very good at anything back-end related though :/</i>
+									  </div>
+									</div>
+								</div>
+								<div class="w3-row-padding">
+									<div class="w3-col s3"><i class="fa fa-code"></i></div>
+									<div class="w3-col s3"><i class="fa fa-html5"></i></div>
+									<div class="w3-col s3"><i class="fa fa-css3"></i></div>
+									<div class="w3-col s3"><i class="fa fa-jsfiddle"></i></div>
+								</div>
+							</div>
+							<div class="w3-half w3-mobile w3-light-grey w3-small">
+								<ul>
+									<li>HTML5</li>
+									<li>CSS3</li>
+									<li>Javascript</li>
+									<li>PHP</li>
+									<li>MySQL</li>
+								</ul>
+							</div>
+						</div>
+						<div class="w3-row w3-border">
+							<div class="w3-center w3-half w3-mobile">
+								<button onclick="document.getElementById('id06').style.display='block'" class="w3-button">OFFICE</button>
+								<div id="id06" class="w3-modal">
+									<div class="w3-modal-content w3-card-4 w3-animate-opacity">
+									  <header class="w3-container w3-rounded w3-pink"> 
+										<span onclick="document.getElementById('id06').style.display='none'" 
+										class="w3-button w3-display-topright">&times;</span>
+										<h3>OFFICE</h3>
+									  </header>
+									  <div class="w3-container">
+										<i>Yes I will better your powerpoint presentation shall you need it</i>
+									  </div>
+									</div>
+								</div>
+								<div class="w3-row-padding">
+									<div class="w3-col s4"><i class="fa fa-windows"></i></div>
+									<div class="w3-col s4"><i class="fa fa-pencil-square"></i></div>
+									<div class="w3-col s4"><i class="fa fa-google"></i></div>
+								</div>
+							</div>
+							<div class="w3-half w3-mobile w3-light-grey w3-small">
+								<ul>
+									<li>Microsoft Office</li>
+									<li>Libre Office</li>
+									<li>Google suite</li>
+								</ul>
+							</div>
+						</div>
+						<div class="w3-row w3-border">
+							<div class="w3-center w3-half w3-mobile">
+								<button onclick="document.getElementById('id07').style.display='block'" class="w3-button">OTHER</button>
+								<div id="id07" class="w3-modal">
+									<div class="w3-modal-content w3-card-4 w3-animate-opacity">
+									  <header class="w3-container w3-rounded w3-pink"> 
+										<span onclick="document.getElementById('id07').style.display='none'" 
+										class="w3-button w3-display-topright">&times;</span>
+										<h3>OTHER</h3>
+									  </header>
+									  <div class="w3-container">
+										<i>My aim is obtening all the skills needed to produce and market a project<br> From the ground up</i>
+									  </div>
+									</div>
+								</div>
+								<div class="w3-row-padding">
+									<div class="w3-col s4"><i class="fa fa-headphones"></i></div>
+									<div class="w3-col s4"><i class="fa fa-music"></i></div>
+									<div class="w3-col s4"><i class="fa fa-file-video-o"></i></div>
+								</div>
+							</div>
+							<div class="w3-half w3-mobile w3-light-grey w3-small">
+								<ul>
+									<li>Sound design</li>
+									<li>Music</li>
+									<li>Video</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="w3-col w3-half w3-padding-large">
+					<p class="w3-center w3-wide" ><strong>EXPERIENCE</strong></p>
+					
+					<div class="w3-col w3-border l12" id="le job le + important">
+						<div class="w3-row w3-center w3-light-grey">
+							<p><strong>WEB CONSULTANT</strong></p>
+						</div>
+						<div class="w3-row ">
+							<div class="w3-half w3-mobile w3-center w3-small">
+								<p><i class="fa fa-lg fa-clock-o"></i><br>Current position<br><i>Since early 2017</i></p>
+							</div>
+							<div class="w3-half w3-mobile w3-center w3-small">
+								<p><i class="fa fa-lg fa-map-marker"></i><br>
+								CCI de Maine-et-Loire</p>
+							</div>
+						</div>
+						<div class="w3-row w3-padding-small">
+							<p class="txt-med2sml txt-yp">I currently work as an executive at the CCI to help business launch projects on the web through formation and/or individual consulting. I am learning a lot about traditionnal business which helps me expand my horizons. I am specializing in webmarketing, SEO, and digital communication.</p>
+							<p class="w3-small">#marketing #business #consulting #webmarketing #seo</p>
+						</div>
+					</div>
+					<div class="w3-row" id="les 2 job après">
+						<div class="w3-col w3-border l6">
+							<div class="w3-row w3-center w3-light-grey">
+								<p><strong>UI/UX OFFICER</strong></p>
+							</div>
+							<div class="w3-row ">
+								<div class="w3-half w3-mobile w3-center w3-small">
+									<p><i class="fa fa-lg fa-clock-o"></i><br> late 2016<br><i>4 months mission</i></p>
+								</div>
+								<div class="w3-half w3-mobile w3-center w3-small">
+									<p><i class="fa fa-lg fa-map-marker"></i><br>
+									SUIOIP - University of Angers</p>
+								</div>
+							</div>
+							<div class="w3-row w3-padding-small">
+								<p class="txt-med2sml txt-yp">I had the opportunity to work for my old university in late 2016. My job was to p a website to help student be aware of the plans available to explore entrepreneurship.</p>
+								<p class="w3-small">#webdesign #front-end-dev #creativity #animation</p>
+							</div>
+						</div>
+						<div class="w3-col w3-border l6">
+							<div class="w3-row w3-center w3-light-grey">
+								<p><strong>ASSISTANT WEB PROJECT MANAGER </strong></p>
+							</div>
+							<div class="w3-row ">
+								<div class="w3-half w3-mobile w3-center w3-small">
+									<p><i class="fa fa-lg fa-clock-o"></i><br>mid-2016<br><i>5 months internship</i></p>
+								</div>
+								<div class="w3-half w3-mobile w3-center w3-small">
+									<p><i class="fa fa-lg fa-map-marker"></i><br>
+									CCI de Maine-et-Loire</p>
+								</div>
+							</div>
+							<div class="w3-row w3-padding-small">
+								<p class="txt-med2sml txt-yp">I was recruted to help manage the <a href="http://www.webcampday.com/" target="_blank">WebCampDay</a> : an event about Webmarketing in Angers - 250 attendees on 2016 and 350 in 2017 - I ended up helping on various subjects :
+									<ul class="w3-small">
+										<li>helping with the schedule management</li>
+										<li>getting in contact with the speakers</li>
+										<li>setting up the form for the after-event</li>
+										<li>...</li>
+									</ul>
+								</p>
+								<p class="w3-small">#ProjectManagement #Benchmarking #CommunityManagement #UX-UI</p>
+							</div>
+						</div>
+					</div>
+					<div class="w3-row" id="2 jobs cachés">
+						<div class="w3-row w3-center">
+							<br><button onclick="toggleFunction()" class="w3-btn w3-white w3-border w3-border-blue w3-round-large w3-padding-large w3-mobile">More jobs ?</button>
+							<div class="w3-row w3-hide" id="2jobsrestants">
+								<br>
+								<div class="w3-col w3-border l6">
+									<div class="w3-row w3-center w3-light-grey">
+										<p><strong>KNOWLEDGE ENGINEER</strong></p>
+									</div>
+									<div class="w3-row ">
+										<div class="w3-half w3-mobile w3-center w3-small">
+											<p><i class="fa fa-lg fa-clock-o"></i><br>mid-2015<br><i>6 months internship</i></p>
+										</div>
+										<div class="w3-half w3-mobile w3-center w3-small">
+											<p><i class="fa fa-lg fa-map-marker"></i><br>
+											Société Française de Prospective</p>
+										</div>
+									</div>
+									<div class="w3-row w3-padding-small">
+										<p class="txt-med2sml txt-yp">My last intership with the <a href="http://www.istia.univ-angers.fr/fr/index.html" target="_blank">ISTIA</a> took place in the <a href="http://www.societefrancaisedeprospective.fr/" target="_blank">French Foresight Society</a>. I was in charge of managing the two main summer events : the <a href="http://assosfp.wixsite.com/p2-2015-simplexite" target="_blank">Foresight Spring</a> and the <a href="http://assosfp.wixsite.com/futurcamp2015" target="_blank">FuturCamp</a>.</p>
+										<p class="w3-small">#KnowledgeMGMT #CommunityManagement #ProjectManagement #Webdesign</p>
+									</div>
+								</div>
+								<div class="w3-col w3-border l6">
+									<div class="w3-row w3-center w3-light-grey">
+										<p><strong>FREELANCER</strong></p>
+									</div>
+									<div class="w3-row ">
+										<div class="w3-half w3-mobile w3-center w3-small">
+											<p><i class="fa fa-lg fa-clock-o"></i><br>early 2016<br><i>6 months experience</i></p>
+										</div>
+										<div class="w3-half w3-mobile w3-center w3-small">
+											<p><i class="fa fa-lg fa-map-marker"></i><br>
+											Creactr</p>
+										</div>
+									</div>
+									<div class="w3-row w3-padding-small">
+										<p class="txt-med2sml txt-yp">Right after my graduation from <a href="http://www.istia.univ-angers.fr/fr/index.html" target="_blank">ISTIA</a>I wanted to try freelancing. I had an idea and I wanted to give it a chance. I took the <a href="http://www.creer.lunam.fr/" target="_blank">"Student-Freelancer"</a> status and went to brainstorm and meet inspiring people in <a href="http://www.weforge.fr/en" target="_blank">WeForge</a> in Angers. I worked on CREACTR : an app to help designer and freelancer get together to work more easily. However I realized during the market research that this idea had already been brought to life by various competitors. I disabled the website but the <a href="https://twitter.com/creactr" target="_blank">twitter</a> and the <a href="http://creactr.tumblr.com/" target="_blank">blog</a> are still up. #Nostalgia</p>
+										<p class="w3-small">#Freelance #Webdesign #Brainstorming #Creativity #Benchmarking #MarketResearch</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="w3-center">
+					<p class="w3-large w3-padding-16">Im also really good at:</p>
+					<div class="w3-row">
+						<div class="w3-quarter">
+							<div class="w3-mobile">
+								<i class="fa fa-puzzle-piece"></i>
+							</div>
+							<div class="w3-mobile">
+								<p>Taking initiative and adapting</p>
+							</div>
+						</div>
+						<div class="w3-quarter">
+							<div class="w3-mobile">
+								<i class="fa fa-cloud"></i>
+							</div>
+							<div class="w3-mobile">
+								<p>Being curious and having imagination</p>
+							</div>
+						</div>
+						<div class="w3-quarter">
+							<div class="w3-mobile">
+								<i class="fa fa-users"></i>
+							</div>
+							<div class="w3-mobile">
+								<p>Working in teams</p>
+							</div>
+						</div>
+						<div class="w3-quarter">
+							<div class="w3-mobile">
+								<i class="fa fa-comments-o"></i>
+							</div>
+							<div class="w3-mobile">
+								<p>Oral and written communication</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</section>
+	<section data-anchor="position" id="position">
+		<!-- Second Parallax Image with Portfolio Text -->
+		<div class="bgimg-1 w3-display-container w3-opacity-min" style="height:300px;">
+			<div class="w3-display-middle">
+				<span class="w3-xxlarge w3-text-white w3-wide titre">POSITION</span>
+			</div>
+		</div>
+		<div class="w3-container">
+			<div class="w3-row w3-center w3-padding">
+				<p class="txt-yp"><em>Why am I qualified for this position ?</em></p>
+			</div>
+			<div class="w3-row">
+				<div class="w3-col w3-half">
+					<p class="w3-center w3-wide"><strong>MISSIONS</strong></p>
+					<div class="w3-col w3-padding-small">
+						<div class="w3-row">
+							<p><i class="fa fa-square-o"></i> Participate in the elaboration of the political communication strategy</p>
+							<p class="w3-panel txt-yp w3-leftbar">During my time at the University of Angers I have helped the team to put out the communication strategy for the unit. However I am looking forward to learn more about the political aspect of the communication strategu @ <a href="http://www.live-dma.eu/" target="_blank">liveDMA</a></p>
+						</div>
+						<div class="w3-row">
+							<p><i class="fa fa-check-square-o"></i> Facilitate networking and exchanges’ opportunities with the members</p>
+							<p class="w3-panel txt-yp w3-leftbar">I'm used to setting up tools to help teams work together. Using solutions like <a href="https://slack.com/" target="_blank">Slack</a>, <a href="https://basecamp.com" target="_blank">Basecamp</a> or <a href="https://products.office.com/fr-fr/yammer/yammer-overview" target="_blank">social networks</a> especially. I think communication is the key to an efficient projet management.</p>
+						</div>
+						<div class="w3-row">
+							<p><i class="fa fa-check-square-o"></i> Gather and organize a resource toolkit for the members</p>
+							<p class="w3-panel txt-yp w3-leftbar">This part of the mission really motivates me ! I have a lot of ideas and I am very eager to work on that. I've been helping business to take advantage of the web since january and I'd be glad to put those skills in action for the members of <a href="http://www.live-dma.eu/" target="_blank">liveDMA</a>.</p>
+						</div>
+						<div class="w3-row">
+							<p><i class="fa fa-check-square-o"></i> Run the website, social media accounts, newsletters sending and develop new communication tools</p>
+							<p class="w3-panel txt-yp w3-leftbar">You can check some of my communication projects in the <a href="#" data-scroll="showcase"> showcase</a> section.</p>
+						</div>
+						<div class="w3-row">
+							<p><i class="fa fa-check-o"></i> Coordinate the publications process with the graphic designer and overview the printings</p>
+							<p class="w3-panel txt-yp w3-leftbar">At my current position I work regularly with the graphic team to coordinate our actions.</p>
+						</div>
+						<div class="w3-row">
+							<p><i class="fa fa-square-o"></i> Set up media relations and press releases</p>
+							<p class="w3-panel txt-yp w3-leftbar">I don't know that at all an am eager to learn !</p>
+						</div>
+						<div class="w3-row">
+							<p><i class="fa fa-check-square-o"></i> Manage the Independent Venues Campaign and the Open Club Door Day projects</p>
+							<p class="w3-panel txt-yp w3-leftbar">I had the occasion to developpe event management skills during the <a href="http://assosfp.wixsite.com/futurcamp2015" target="_blank">FuturCamp</a> (3 days, 30 visitors, several brainstorming sessions, everything was filmed) and the <a href="http://www.webcampday.com/" target="_blank">WebCampDay</a> (1 day, 350 visitors, livetweet, lots of partners and logistic)</p>
+						</div>
+						<div class="w3-row">
+							<p><i class="fa fa-check-square-o"></i> Assist the General Secretary for meetings production
+							<br><i class="fa fa-check-square-o"></i> Represent Live DMA during meetings</p>
+							<p class="w3-panel txt-yp w3-leftbar">This kind of tasks are done on a monthly basis @ my current position. I understand the importance of reporting for a smooth management experience.</p>
+						</div>
+					</div>
+				</div>
+				<div class="w3-col w3-half">
+					<p class="w3-center w3-wide" ><strong>SKILLS</strong></p>
+					<div class="w3-col w3-padding-small">
+						<div class="w3-row">
+							<p><i class="fa fa-square-o"></i> Either  a  higher  education  degree  in  a  relevant  subject  (communication, cultural management, European studies, political science) or significant experience  working  in  a  comparable  environment (cultural/European project’s management/communication)</p>
+							<p class="w3-panel txt-yp w3-leftbar">I am an innovation engineer and I am specializing in digital communication in 2017 with my current position. However I do not possess an academical background in cultural management or political science. During my years at the <a href="http://www.istia.univ-angers.fr/fr/index.html" target="_blank">ISTIA</a> we've studied European call to projects systems.</p>
+						</div>
+						<div class="w3-row">
+							<p><i class="fa fa-pencil-square-o"></i> A  very  good  knowledge  about  cultural  policies and international music sector with a strong interest for popular live music </p>
+							<p class="w3-panel txt-yp w3-leftbar">If I lack academical knowledge of cultural policies and the music sector - I am very involved in my local scene through my various projects : <a href="http://ultraviolence.band" target="_blank">ULTRAVIOLENCE</a>, <a href="https://mandarine.band" target="_blank">M A N D A R I N E</a>, <a href="https://soundcloud.com/frenchhype" target="_blank">laptopStrummer</a>. I am also the founder of the Facebook group <a href="https://www.facebook.com/groups/1747534738796787" target="_blank">Anjou Indé Club</a> that aims to help structure the local indie rock scene. I am also a member of the booking association <a href="http://backtofragile.com/" target="_blank">Back2Fragile</a>. I am looking forward to learn more about the music industry.</p>
+						</div>
+						<div class="w3-row">
+							<p><i class="fa fa-check-square-o"></i> Ability to  use  graphic  tools  and  design  softwares  such  as  Indesign, Photoshop or  Illustrator,  mailchimp  and  being  able  to  run  a  wordpress website </p>
+							<p class="w3-panel txt-yp w3-leftbar">I hope what you've read so far has convinced you of that.</p>
+						</div>
+						<div class="w3-row">
+							<p><i class="fa fa-check-square-o"></i> Ability to create tools & methodology to manage campaigns and projects</p>
+							<p class="w3-panel txt-yp w3-leftbar">I thrive on tailoring tools adapted to projects. I won't however reinvent the wheel and rather pick and tune the most adapted tool for each mission.</p>
+						</div>
+						<div class="w3-row">
+							<p><i class="fa fa-check-square-o"></i> Speak  fluent  English  and  have  perfect  writing  skills  (another  language would be an asset) </p>
+							<p class="w3-panel txt-yp w3-leftbar">I am fluent in english and I have notions of german.</p>
+						</div>
+						<div class="w3-row">
+							<p><i class="fa fa-check-square-o"></i> Ability to work independently under tight deadlines
+							<br><i class="fa fa-check-square-o"></i> Creative and good relational ease </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w3-panel w3-leftbar w3-dark-grey w3-xlarge w3-serif">
+			<p><i>I hope this website helped you knowing me better. I look forward to exchange with you. <br>Please feel free to contact me with the section bellow.</i></p>
+		</div>  
+	</section>
+	<!-- Third Parallax Image with Portfolio Text -->
+	<section data-anchor="contact" id="contact">
+		<div class="bgimg-1 w3-display-container w3-opacity-min" style="height:300px;">
+		  <div class="w3-display-middle">
+			 <span class="w3-xxlarge w3-text-white w3-wide titre">CONTACT</span>
+		  </div>
+		</div>
+
+		<!-- Container (Contact Section) -->
+		<div class="w3-content w3-container w3-padding-64">
+			<h3 class="w3-center">YOU CAN USE THE FORM TO ANSWER !</h3>
+			<p class="w3-center"><em>I'd love your feedback!</em></p>
+			<div class="w3-row w3-padding-32 w3-center">
+				<div class="w3-col m4">
+					<div class="w3-mobile"><i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge"></i></div>
+					<div class="w3-mobile">Angers, FRANCE</div>
+				</div>
+				<div class="w3-col m4">
+					<div class="w3-mobile"><i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge"></i></div>
+					<div class="w3-mobile">06 81 26 67 50</div>
+				</div>
+				<div class="w3-col m4">
+					<div class="w3-mobile"><i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge"></i></div>
+					<div class="w3-mobile">contact@yvespolcabon.com</div>
+				</div>
+<p><br><br></p>
+				<p>Feel free to get back to me directly :</p>
+				<form action="mailto:contact@yvespolcabon.com" method="post" enctype="text/plain">
+					<div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+						<div class="w3-half">
+							<input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+						</div>
+						<div class="w3-half">
+							<input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+						</div>
+					</div>
+					<input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+					<button class="w3-button w3-black w3-section " type="submit">
+						<i class="fa fa-paper-plane w3-margin-right"></i>SEND MESSAGE
+					</button>
+				</form>
+			</div>
+		  </div>
+	</section>
+	<!-- Footer -->
+	<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+		<a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+		<div class="w3-xlarge w3-section">
+			<a href="https://twitter.com/YvesPolCABON" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+			<a href="http://www.linkedin.com/in/yvespolcabon" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+			<a href="http://yvespolcabon.com/" target="_blank"><i class="fa fa-user w3-hover-opacity"></i></a>
+			<a href="https://soundcloud.com/frenchhype" target="_blank"><i class="fa fa-soundcloud w3-hover-opacity"></i></a>
+			<a href="https://mandarine.band/" target="_blank"><i class="fa fa-music w3-hover-opacity"></i></a>
+		</div>
+	  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+	</footer>
+</div> <!--fin de la zclass-->
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("2jobsrestants");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
